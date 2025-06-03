@@ -10,5 +10,5 @@ export interface UserConfig {
 export interface Language {
     code: string;
     name: string;
-    flag: string;
+    icon: string;
 }

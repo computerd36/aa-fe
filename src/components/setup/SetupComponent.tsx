@@ -2,7 +2,6 @@ import { ChevronLeft, ChevronRight, LucideMessageCircleQuestion, X } from "lucid
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button, SliderValue } from "@heroui/react";
-import { Language } from "../../resources";
 import { SetupStep2 } from "./SetupStep2";
 import { SetupStep3 } from "./SetupStep3";
 import { SetupStep4 } from "./SetupStep4";
@@ -19,11 +18,11 @@ export const SetupComponent = () => {
 
     const [step, setStep] = useState<Step>(1);
 
+
     // form states
     const [name, setName] = useState<string>('');
     const [metrics, setMetrics] = useState<Metric>('level');
     const [metricValue, setMetricValue] = useState<MetricValue>(2.5);
-    const [language, setLanguage] = useState<Language | undefined>(undefined);
 
 
 
@@ -31,10 +30,7 @@ export const SetupComponent = () => {
     const renderSteps = (step: Step) => {
         switch (step) {
             case 1:
-                return <SetupStep1
-                    language={language}
-                    setLanguage={setLanguage}
-                />
+                return <SetupStep1 />
             case 2:
                 return <SetupStep2
                     name={name}
@@ -50,20 +46,16 @@ export const SetupComponent = () => {
             case 4:
                 return <SetupStep4 />
             case 5:
-                if (!language) setStep(1);
                 return <SetupStep5
                     name={name}
                     metric={metrics}
                     metricValue={metricValue}
-                    language={language!}
                 />
             case 6:
-                if (!language) setStep(1);
                 return <SetupStep6
                     name={name}
                     metric={metrics}
                     metricValue={metricValue}
-                    language={language!}
                 />
         }
 
@@ -103,7 +95,7 @@ export const SetupComponent = () => {
                     variant="faded"
                     className="bg-zinc-950 text-zinc-50"
                     onPress={() => setStep(step + 1 as Step)}
-                    isDisabled={(step === 1 && !language) || (step === 2 && name.length < 3) || (step === 6)}
+                    isDisabled={(step === 2 && name.length < 3) || (step === 6)}
                     endContent={<ChevronRight />}
                 >
                     Next

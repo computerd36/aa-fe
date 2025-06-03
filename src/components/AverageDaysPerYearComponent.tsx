@@ -39,9 +39,9 @@ export const AverageDaysPerYearComponent = ({
 
     const count =
         metric === "level"
-            ? levelData.filter((v) => v >= value).length
+            ? Math.ceil(levelData.filter((v) => v >= value).length / 7)
             : metric === "flowrate"
-                ? flowrateData.filter((v) => v >= value).length
+                ? Math.ceil(flowrateData.filter((v) => v >= value).length / 7)
                 : null;
 
     if (count == null) {

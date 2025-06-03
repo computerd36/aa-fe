@@ -1,15 +1,16 @@
 import { SliderValue } from "@heroui/react"
 import { Metric } from "./SetupComponent"
-import { Language } from "../../resources"
+import { useLanguage } from "../../context/languageContext"
 
 interface SetupStep5Props {
     name: string,
     metric: Metric,
     metricValue: SliderValue,
-    language: Language
 }
 
-export const SetupStep5 = ({ name, metric, metricValue, language }: SetupStep5Props) => {
+export const SetupStep5 = ({ name, metric, metricValue }: SetupStep5Props) => {
+
+    const { language } = useLanguage();
 
     return (
         <div className="w-full">

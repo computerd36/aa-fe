@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom"
 import { PageLanding } from "./routes/PageLanding"
 import { PageSetup } from "./routes/PageSetup"
 import { PageStatus } from "./routes/PageStatus";
+import { LanguageProvider } from "./context/languageContext";
 
 
 function App() {
@@ -11,11 +12,13 @@ function App() {
 
   return (
     <main className="dark">
-      <Routes>
-        <Route path="/" element={<PageLanding />} />
-        <Route path="/setup" element={<PageSetup />} />
-        <Route path="/status" element={<PageStatus />} />
-      </Routes>
+      <LanguageProvider>
+        <Routes>
+          <Route path="/" element={<PageLanding />} />
+          <Route path="/setup" element={<PageSetup />} />
+          <Route path="/status" element={<PageStatus />} />
+        </Routes>
+      </LanguageProvider >
     </main>
   )
 }

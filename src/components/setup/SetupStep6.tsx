@@ -1,18 +1,19 @@
 import { SliderValue } from "@heroui/react"
 import { Metric } from "./SetupComponent"
-import { Language } from "../../resources";
 import { ButtonComponent } from "../ButtonComponent";
 
 import pushsaferLogo from "../../assets/pushsafer.webp"
+import { useLanguage } from "../../context/languageContext";
 
 interface SetupStep6Props {
     name: string,
     metric: Metric,
     metricValue: SliderValue,
-    language: Language
 }
 
-export const SetupStep6 = ({ name, metric, metricValue, language }: SetupStep6Props) => {
+export const SetupStep6 = ({ name, metric, metricValue }: SetupStep6Props) => {
+    const { language } = useLanguage();
+
     metricValue = Array.isArray(metricValue) ? metricValue[0] : metricValue;
 
 

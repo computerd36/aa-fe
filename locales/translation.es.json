@@ -1,0 +1,24 @@
+{
+  "components": {
+    "navbar": {
+      "howItWorks": "Cómo funciona",
+      "status": "Estado",
+      "support": "Ayuda",
+      "getStarted": "Comenzar"
+    },
+    "setup": {
+      "title": "Setup Instructions",
+      "description": "Follow these steps to set up your application."
+    }
+  },
+  "pages": {
+    "landing": {
+      "realTimeAlerts": "Alertas en tiempo real",
+      "viaYourPhone": "a través de su teléfono",
+      "subtitle": "Reciba notificaciones críticas instantáneas de los cambios de caudal y nivel de agua, con valores de alerta personalizables para adaptarse a sus necesidades.",
+      "dataProvidedBy": "Datos proporcionados por",
+      "getStarted": "Comenzar",
+      "learnMore": "Aprender más"
+    }
+  }
+}

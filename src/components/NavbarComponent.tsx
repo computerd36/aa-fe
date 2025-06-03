@@ -2,10 +2,13 @@ import { Navbar, NavbarBrand, NavbarContent, NavbarItem } from "@heroui/react"
 import { LogIn } from "lucide-react"
 import { Link } from "react-router-dom"
 import { ButtonComponent } from "./ButtonComponent"
+import { useTranslation } from "react-i18next"
+import { LanguageSelectorComponent } from "./LanguageSelectorComponent"
 
 
 
 export const NavbarComponent = () => {
+    const { t } = useTranslation();
 
 
     /**
@@ -30,23 +33,23 @@ export const NavbarComponent = () => {
 
             <NavbarContent className="hidden sm:flex gap-4" justify="center">
                 <NavbarItem>
-                    <Link to={'/'} className={`${getLinkClass('/')}`}>Home</Link>
+                    <Link to={'/how'} className={`${getLinkClass('/how')}`}>{t('components.navbar.howItWorks')}</Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link to={'/how'} className={`${getLinkClass('/how')}`}>How it works</Link>
+                    <Link to={'/status'} className={`${getLinkClass('/status')}`}>{t('components.navbar.status')}</Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link to={'/status'} className={`${getLinkClass('/status')}`}>Status</Link>
-                </NavbarItem>
-                <NavbarItem>
-                    <Link to={'/support'} className={`${getLinkClass('/support')}`}>Support</Link>
+                    <Link to={'/support'} className={`${getLinkClass('/support')}`}>{t('components.navbar.support')}</Link>
                 </NavbarItem>
             </NavbarContent>
             <NavbarContent justify="end">
                 <NavbarItem>
+                    <LanguageSelectorComponent />
+                </NavbarItem>
+                <NavbarItem>
                     <ButtonComponent
                         icon={<LogIn />}
-                        text="Get started"
+                        text={t('components.navbar.getStarted')}
                         to="/setup"
                         isPrimary
                     />

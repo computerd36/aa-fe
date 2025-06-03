@@ -7,9 +7,11 @@ import { PageWrapper } from "../wrappers/PageWrapper"
 import { ButtonComponent } from "../components/ButtonComponent"
 import { WaveComponent } from "../components/WaveComponent"
 import { motion } from "framer-motion"
+import { useTranslation } from "react-i18next"
 
 
 export const PageLanding = () => {
+    const { t } = useTranslation();
 
     return (
         <PageWrapper isLanding>
@@ -26,24 +28,24 @@ export const PageLanding = () => {
                     }}
                     transition={{ type: "spring", stiffness: 200, duration: 0.3 }}
                 >
-                    <h1 className="text-4xl md:text-5xl xl:text-6xl 2xl:text-8xl font-medium text-center text-zinc-50 pb-2"><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary font-bold">Real-Time Alerts</span><br /> via your Phone</h1>
-                    <h2 className="text-sm md:text-md xl:text-xl 2xl:text-2xl text-center text-zinc-200 text-balance">Receive instant critical notifications for water flow and level changes, with customisable alert values to suit your needs.</h2>
+                    <h1 className="text-4xl md:text-5xl xl:text-6xl 2xl:text-8xl font-medium text-center text-zinc-50 pb-2"><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary font-bold">{t('pages.landing.realTimeAlerts')}</span><br />{t('pages.landing.viaYourPhone')}</h1>
+                    <h2 className="text-sm md:text-md xl:text-xl 2xl:text-2xl text-center text-zinc-200 text-balance">{t('pages.landing.subtitle')}</h2>
                     <div className="w-full flex gap-4 mt-4 justify-center">
                         <ButtonComponent
                             icon={<LogIn />}
-                            text="Get started"
+                            text={t('pages.landing.getStarted')}
                             to="/setup"
                             isPrimary
                         />
                         <ButtonComponent
                             icon={<BookText />}
-                            text="Learn more"
+                            text={t('pages.landing.learnMore')}
                             to="/how"
                         />
                     </div>
                     <div className="w-full flex items-center justify-center mt-8 gap-8">
                         <div>
-                            <h3 className="text-xs text-center text-zinc-200">Data provided by</h3>
+                            <h3 className="text-xs text-center text-zinc-200">{t('pages.landing.dataProvidedBy')}</h3>
                             <a href="https://www.saihebro.com" target="_blank" rel="noreferrer">
                                 <img src={logoSAIH} alt="logo" className="mt-2 mx-auto h-6" />
                             </a>

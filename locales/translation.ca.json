@@ -1,0 +1,21 @@
+{
+  "components": {
+    "navbar": {
+      "home": "Home",
+      "howItWorks": "How it works",
+      "status": "Status",
+      "support": "Support",
+      "getStarted": "Get Started"
+    },
+    "setup": {
+      "title": "Setup Instructions",
+      "description": "Follow these steps to set up your application."
+    }
+  },
+  "pages": {
+    "landing": {
+      "title": "Welcome to the Home Page",
+      "description": "This is the home page of our application."
+    }
+  }
+}
