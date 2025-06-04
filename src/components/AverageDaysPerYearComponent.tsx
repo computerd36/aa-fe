@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Trans, useTranslation } from "react-i18next";
 
 export interface AverageDaysPerYearComponentProps {
     value: number;
@@ -9,6 +10,8 @@ export const AverageDaysPerYearComponent = ({
     value,
     metric,
 }: AverageDaysPerYearComponentProps) => {
+    const { t } = useTranslation();
+
     const [levelData, setLevelData] = useState<number[]>([]);
     const [flowrateData, setFlowrateData] = useState<number[]>([]);
 
@@ -49,10 +52,18 @@ export const AverageDaysPerYearComponent = ({
     }
 
     const getColor = (value: number) => {
-        if (value <= 5) return "text-red-500"; // 0-5 times a year = red
-        if (value <= 20) return "text-yellow-500" // 4-12 times a year = yellow
-        return "text-green-500"; // 13+ times a year = green    
+        if (value <= 5) return "text-green-500";
+        if (value <= 20) return "text-yellow-500"
+        return "text-red-500";
     };
 
-    return <span className={`font-bold mx-1 text-xl ${getColor(count)}`}>{count}</span>;
+    return (
+        <span className="text-pretty text-center mx-auto">
+            <Trans
+                i18nKey="components.setup.step3.hint"
+                components={{ alertAmount: <span className={`font-bold ${getColor(count)} text-nowrap`}>{count} {count === 1 ? t('components.setup.step3.day') : t('components.setup.step3.days')} {t('components.setup.step3.aYear')}</span> }}
+            />
+        </span>
+
+    );
 };

@@ -13,8 +13,12 @@ export default {
         rubik: ['Rubik Variable', 'serif']
       },
       colors: {
+        text: "#e0e5ee",
+        background1: "#0b0b0e",
+        background2: "#0e0e11",
         primary: "#0693e3",
         secondary: "#8ed1fc",
+        accent: "#356bcc",
       }
     },
   },

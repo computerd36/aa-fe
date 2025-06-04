@@ -1,17 +1,17 @@
 export const IMPLEMENTED_LANGUAGES = [
     {
         code: 'en',
-        name: 'English',
+        name: 'english',
         icon: 'gb'
     },
     {
         code: 'es',
-        name: 'Spanish',
+        name: 'spanish',
         icon: 'es'
     },
     {
         code: 'ca',
-        name: 'Catalan',
+        name: 'catalan',
         icon: 'ca'
     }
 ];

@@ -1,21 +1,68 @@
 {
   "components": {
     "navbar": {
-      "home": "Home",
-      "howItWorks": "How it works",
-      "status": "Status",
-      "support": "Support",
-      "getStarted": "Get Started"
+      "howItWorks": "Com funciona",
+      "status": "Estat",
+      "support": "Suport",
+      "getStarted": "Començar"
     },
     "setup": {
-      "title": "Setup Instructions",
-      "description": "Follow these steps to set up your application."
+      "cancel": "Cancel·lar",
+      "back": "Enrere",
+      "next": "Següent",
+      "confirm": "Confirmar",
+      "step1": {
+        "pleaseSelectLanguage": "Si us plau, seleccioneu el vostre idioma",
+        "selectLanguage": "Seleccionar idioma"
+      },
+      "step2": {
+        "howShouldWeCallYou": "Com us hauríem de dir?",
+        "yourName": "El vostre nom"
+      },
+      "step3": {
+        "setAlertThreshold": "Establir llindar d'alerta",
+        "waterLevel": "Nivell de l'aigua",
+        "flowRate": "Cabal",
+        "hint": "S'estima que rebreu alertes aproximadament <alertAmount /> amb aquesta configuració.",
+        "day": "dia",
+        "days": "dies",
+        "aYear": "un any"
+      },
+      "step4": {
+        "title": "Descarregar Pushsafer",
+        "subtitle": "Per rebre alertes crítiques, primer heu de descarregar Pushsafer i completar el procés de configuració. Un cop fet això, podeu tornar a aquesta pàgina.",
+        "pushsaferForIos": "Pushsafer per a iOS",
+        "pushsaferForAndroid": "Pushsafer per a Android"
+      },
+      "step5": {
+        "title": "Confirmeu la vostra configuració",
+        "name": "Nom",
+        "language": "Idioma",
+        "metricType": "Tipus de mètrica",
+        "alertValue": "Valor d'alerta"
+      },
+      "step6": {
+        "addToPushsafer": "Afegir a Pushsafer",
+        "subtitle": "Si heu instal·lat Pushsafer, feu clic en aquest botó per afegir automàticament el vostre compte configurat a Pushsafer. Llavors rebreu una notificació per verificar que el vostre sistema d'alerta funciona.",
+        "addAaToPushsafer": "Afegir AlertAigües a Pushsafer"
+      }
     }
   },
   "pages": {
     "landing": {
-      "title": "Welcome to the Home Page",
-      "description": "This is the home page of our application."
+      "realTimeAlerts": "Alertes en temps real",
+      "viaYourPhone": "a través del vostre telèfon",
+      "subtitle": "Rebeu notificacions crítiques instantànies dels canvis de cabal i nivell d'aigua, amb valors d'alerta personalitzables per adaptar-se a les vostres necessitats.",
+      "dataProvidedBy": "Dades proporcionades per",
+      "getStarted": "Començar",
+      "learnMore": "Aprendre més"
+    }
+  },
+  "general": {
+    "languages": {
+      "english": "Anglès",
+      "spanish": "Castellà",
+      "catalan": "Català"
     }
   }
 }

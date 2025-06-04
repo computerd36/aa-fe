@@ -1,22 +1,20 @@
-import { Slider, SliderValue, Switch } from "@heroui/react"
+import { Slider, Tab, Tabs } from "@heroui/react"
 import { Metric } from "./SetupComponent"
-import { FaArrowsUpToLine } from "react-icons/fa6"
-import { TbArrowWaveRightDown } from "react-icons/tb"
 import { AverageDaysPerYearComponent } from "../AverageDaysPerYearComponent"
 import { useEffect } from "react"
+import { TriangleAlert } from "lucide-react"
+import { useTranslation } from "react-i18next"
 
 interface SetupStep3Props {
     metric: Metric
     setMetric: (metric: Metric) => void
-    metricValue: SliderValue
-    setMetricValue: (value: SliderValue) => void
+    metricValue: number
+    setMetricValue: (value: number) => void
 }
 
 export const SetupStep3 = ({ metric, setMetric, metricValue, setMetricValue }: SetupStep3Props) => {
-
-    // ensure that its a number because sliderValue can be an array
-    metricValue = Array.isArray(metricValue) ? metricValue[0] : metricValue;
-
+    const { t } = useTranslation();
+    
     const formatDischarge = (v: number): React.ReactNode =>
         metric === 'level'
             ? `${new Intl.NumberFormat(undefined, {
@@ -45,35 +43,33 @@ export const SetupStep3 = ({ metric, setMetric, metricValue, setMetricValue }: S
 
     return (
         <div className="w-full">
-            <h2 className="text-2xl text-center font-medium text-zinc-50 mb-4">Set Alert Threshold</h2>
+            <h2 className="text-3xl text-center font-medium text-zinc-50 mb-6">{t('components.setup.step3.setAlertThreshold')}</h2>
             <div className="flex items-center flex-col gap-2">
-                <div className="flex items-center gap-2 text-white">
-                    <span>Water Level</span>
-                    <Switch
-                        isSelected={metric === "flowrate"}
-                        onValueChange={(checked) =>
-                            setMetric(checked ? "flowrate" : "level")
-                        }
-                        endContent={<FaArrowsUpToLine />}
-                        startContent={<TbArrowWaveRightDown />}
-                        classNames={{
-                            wrapper: `bg-gradient-to-r from-primary to-secondary`,
-                            endContent: `text-white`,
-                            startContent: `text-white`,
+                <div className="flex items-center gap-2 text-white mb-4">
+                    <Tabs
+                        selectedKey={metric}
+                        onSelectionChange={(key) => {
+                            if (key === 'level' || key === 'flowrate') {
+                                setMetric(key as Metric);
+                            }
                         }}
-                    />
-                    <span>Flow Rate</span>
+                    >
+                        <Tab key="level" title={t('components.setup.step3.waterLevel')} />
+                        <Tab key="flowrate" title={t('components.setup.step3.flowRate')} />
+                    </Tabs>
+                </div>
+                <div className="flex items-center gap-4 px-4 py-2 mb-4 text-white text-center text-sm bg-background2 ring-1 ring-text/20 rounded-lg">
+                    <TriangleAlert className="min-w-6 min-h-6 md:w-8 md:h-8" />
+                    <AverageDaysPerYearComponent metric={metric} value={metricValue} />
                 </div>
                 <Slider
-                    className={`w-full text-white`}
+                    className={`w-full text-white mb-12`}
                     value={metricValue}
                     onChange={(value) => setMetricValue(Array.isArray(value) ? value[0] : value)}
-                    label={`Set ${metric} value`}
                     aria-label={`Set ${metric} value`}
                     minValue={metric === 'level' ? 0.5 : 5}
                     maxValue={metric === 'level' ? 4 : 200}
                     step={metric === 'level' ? 0.1 : 1}
-                    renderLabel={() => metric.charAt(0).toUpperCase() + metric.slice(1)}
                     getValue={(value) => value + (metric === 'level' ? 'm' : 'm³/s')}
                     showTooltip={true}
                     classNames={{
@@ -83,36 +79,36 @@ export const SetupStep3 = ({ metric, setMetric, metricValue, setMetricValue }: S
                     }}
                     tooltipProps={{
                         content: formatDischarge(metricValue),
+                        isOpen: true,
                         offset: 10,
-                        placement: "top",
+                        placement: "bottom",
                         classNames: {
                             base: [
                                 // arrow color
-                                "before:bg-gradient-to-r before:from-primary before:to-secondary",
+                                "before:bg-gradient-to-r before:from-primary before:to-primary/80",
                             ],
                             content: [
                                 "py-2 shadow-xl",
-                                "text-white text-md font-bold bg-gradient-to-r from-primary to-secondary/80",
+                                "text-white text-sm font-bold bg-gradient-to-r from-primary to-primary/80",
                             ],
                         },
                     }}
                     tooltipValueFormatOptions={
                         metric === 'level'
-                            ? {                         // → “2 m”, “3.1 m” …
+                            ? {
                                 style: 'unit',
                                 unit: 'meter',
-                                unitDisplay: 'narrow',  // gives just “m”, not “meters”
+                                unitDisplay: 'narrow',
                                 maximumFractionDigits: 1
                             }
-                            : {                         // → “120 m³/s”, “25 m³/s” …
+                            : {
                                 style: 'unit',
-                                unit: 'meter-per-second', // supported in modern engines :contentReference[oaicite:1]{index=1}
+                                unit: 'meter-per-second',
                                 unitDisplay: 'narrow'
                             }
                     }
                 />
             </div>
-            <p className={"text-white text-center text-sm"}>This {metric === "level" ? "level" : "flowrate"} was reached at averaged <AverageDaysPerYearComponent value={Array.isArray(metricValue) ? metricValue[0] : metricValue} metric={metric} /> days per year (2018 - 2025)</p>
         </div>
     )
 }

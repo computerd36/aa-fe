@@ -8,7 +8,7 @@ interface PageWrapperProps {
 
 export const PageWrapper = ({ children, isLanding }: PageWrapperProps) => {
     return (
-        <div className={`relative min-h-screen flex flex-col bg-zinc-950 ${isLanding ? '' : 'pb-4'}`}>
+        <div className={`relative min-h-dvh flex flex-col bg-background1 ${isLanding && 'overflow-hidden'}`}>
             <NavbarComponent />
 
             <div className={`flex flex-col items-center flex-grow ${isLanding ? 'px-0 py-0' : 'px-16 py-8'}`}>

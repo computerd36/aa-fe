@@ -15,7 +15,7 @@ export const PageLanding = () => {
 
     return (
         <PageWrapper isLanding>
-            <div className="w-full h-[calc(70dvh-4rem)] flex flex-col items-start justify-center px-8 py-16">
+            <div className="w-full h-[calc(70dvh-4rem-1px)] flex flex-col items-start justify-center px-8 py-16">
                 <motion.div
                     className="w-full h-full sm:w-2/3 md:w-2/3 3xl:w-1/3 flex flex-col items-center justify-center mx-auto"
                     initial={{

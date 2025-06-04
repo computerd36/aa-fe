@@ -3,6 +3,7 @@ import { Avatar, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from "@
 import { useLanguage } from '../context/languageContext';
 import { IMPLEMENTED_LANGUAGES } from "../utils/BrowserLanguage";
 import { getFlagIconURL } from "../utils/Flag";
+import { useTranslation } from "react-i18next";
 
 /**
  * LanguageSelectorComponent - A component that allows users to select their preferred language.
@@ -14,6 +15,7 @@ import { getFlagIconURL } from "../utils/Flag";
 // Component
 export const LanguageSelectorComponent = () => {
     const { language, setLanguage } = useLanguage();
+    const { t } = useTranslation();
 
     return (
         <Dropdown
@@ -45,7 +47,7 @@ export const LanguageSelectorComponent = () => {
                         key={lang.code}
                         startContent={<Avatar className='w-6 h-6' src={getFlagIconURL(lang.icon)} />}
                     >
-                        {lang.name}
+                        {t('general.languages.' + lang.name)}
                     </DropdownItem>
                 ))}
             </DropdownMenu>

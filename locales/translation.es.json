@@ -7,8 +7,45 @@
       "getStarted": "Comenzar"
     },
     "setup": {
-      "title": "Setup Instructions",
-      "description": "Follow these steps to set up your application."
+      "cancel": "Cancelar",
+      "back": "Volver",
+      "next": "Siguiente",
+      "confirm": "Confirmar",
+      "step1": {
+        "pleaseSelectLanguage": "Por favor, seleccione su idioma",
+        "selectLanguage": "Seleccionar idioma"
+      },
+      "step2": {
+        "howShouldWeCallYou": "¿Cómo deberíamos llamarte?",
+        "yourName": "Tu nombre"
+      },
+      "step3": {
+        "setAlertThreshold": "Establecer umbral de alerta",
+        "waterLevel": "Nivel del agua",
+        "flowRate": "Caudal",
+        "hint": "Se estima que recibirás alertas aproximadamente <alertAmount /> con esta configuración.",
+        "day": "día",
+        "days": "días",
+        "aYear": "un año"
+      },
+      "step4": {
+        "title": "Descargar Pushsafer",
+        "subtitle": "Para recibir alertas críticas, primero debes descargar Pushsafer y completar el proceso de configuración. Una vez hecho esto, puedes volver a esta página.",
+        "pushsaferForIos": "Pushsafer para iOS",
+        "pushsaferForAndroid": "Pushsafer para Android"
+      },
+      "step5": {
+        "title": "Confirma tu configuración",
+        "name": "Nombre",
+        "language": "Idioma",
+        "metricType": "Tipo de métrica",
+        "alertValue": "Valor de alerta"
+      },
+      "step6": {
+        "addToPushsafer": "Añadir a Pushsafer",
+        "subtitle": "Si has instalado Pushsafer, haz clic en este botón para añadir automáticamente tu cuenta configurada a Pushsafer. Luego recibirás una notificación para verificar que tu sistema de alerta funciona.",
+        "addAaToPushsafer": "Añadir AlertAigües a Pushsafer"
+      }
     }
   },
   "pages": {
@@ -19,6 +56,13 @@
       "dataProvidedBy": "Datos proporcionados por",
       "getStarted": "Comenzar",
       "learnMore": "Aprender más"
+    }
+  },
+  "general": {
+    "languages": {
+      "english": "Inglés",
+      "spanish": "Español",
+      "catalan": "Catalán"
     }
   }
 }

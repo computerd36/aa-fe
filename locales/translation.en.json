@@ -7,8 +7,45 @@
       "getStarted": "Get Started"
     },
     "setup": {
-      "title": "Setup Instructions",
-      "description": "Follow these steps to set up your application."
+      "cancel": "Cancel",
+      "back": "Back",
+      "next": "Next",
+      "confirm": "Confirm",
+      "step1": {
+        "pleaseSelectLanguage": "Please select your language",
+        "selectLanguage": "Select Language"
+      },
+      "step2": {
+        "howShouldWeCallYou": "How should we call you?",
+        "yourName": "Your name"
+      },
+      "step3": {
+        "setAlertThreshold": "Set Alert Threshold",
+        "waterLevel": "Water Level",
+        "flowRate": "Flow Rate",
+        "hint": "You are estimated to be alerted around <alertAmount /> with these settings.",
+        "day": "day",
+        "days": "days",
+        "aYear": "a year"
+      },
+      "step4": {
+        "title": "Download Pushsafer",
+        "subtitle": "To receive critical alerts, you must first download Pushsafer and complete the setup process. Once this is done, you can return to this page.",
+        "pushsaferForIos": "Pushsafer for iOS",
+        "pushsaferForAndroid": "Pushsafer for Android"
+      },
+      "step5": {
+        "title": "Confirm your configuration",
+        "name": "Name",
+        "language": "Language",
+        "metricType": "Metric Type",
+        "alertValue": "Alert Value"
+      },
+      "step6": {
+        "addToPushsafer": "Add to Pushsafer",
+        "subtitle": "If you have installed Pushsafer, click this button to automatically add your configured account to Pushsafer. You will then receive a notification to check that your warning system is working.",
+        "addAaToPushsafer": "Add AlertAigües to Pushsafer"
+      }
     }
   },
   "pages": {
@@ -19,6 +56,13 @@
       "dataProvidedBy": "Data provided by",
       "getStarted": "Get Started",
       "learnMore": "Learn More"
+    }
+  },
+  "general": {
+    "languages": {
+      "english": "English",
+      "spanish": "Spanish",
+      "catalan": "Catalan"
     }
   }
 }

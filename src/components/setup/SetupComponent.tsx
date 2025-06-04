@@ -1,20 +1,22 @@
-import { ChevronLeft, ChevronRight, LucideMessageCircleQuestion, X } from "lucide-react";
+import { ChevronLeft, LucideCircleHelp } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Button, SliderValue } from "@heroui/react";
+import { Button, Link as HeroLink } from "@heroui/react";
 import { SetupStep2 } from "./SetupStep2";
 import { SetupStep3 } from "./SetupStep3";
 import { SetupStep4 } from "./SetupStep4";
 import { SetupStep5 } from "./SetupStep5";
 import { SetupStep6 } from "./SetupStep6";
 import { SetupStep1 } from "./SetupStep1";
+import { useTranslation } from "react-i18next";
 
 
-type Step = 1 | 2 | 3 | 4 | 5 | 6;
+export type Step = 1 | 2 | 3 | 4 | 5 | 6;
 export type Metric = 'level' | 'flowrate';
-export type MetricValue = SliderValue;
 
 export const SetupComponent = () => {
+
+    const { t } = useTranslation();
 
     const [step, setStep] = useState<Step>(1);
 
@@ -22,7 +24,7 @@ export const SetupComponent = () => {
     // form states
     const [name, setName] = useState<string>('');
     const [metrics, setMetrics] = useState<Metric>('level');
-    const [metricValue, setMetricValue] = useState<MetricValue>(2.5);
+    const [metricValue, setMetricValue] = useState<number>(1.5);
 
 
 
@@ -35,6 +37,7 @@ export const SetupComponent = () => {
                 return <SetupStep2
                     name={name}
                     setName={setName}
+                    setStep={setStep}
                 />
             case 3:
                 return <SetupStep3
@@ -63,12 +66,12 @@ export const SetupComponent = () => {
 
 
     return (
-        <div className="w-full md:w-2/3 xl:w-1/2 max-w-[800px] h-3/4 max-h-[500px] md:h-1/2 flex flex-col p-8">
+        <div className="w-full md:w-2/3 xl:w-1/2 max-w-[800px] h-3/4 min-h-[500px] md:h-1/2 flex flex-col pt-4 pb-8 px-8 bg-background1 rounded-xl ring-1 ring-text/20 shadow-lg">
 
             {/* header */}
             <div className="w-full h-8 flex items-center justify-between">
-                <Link to={'/'} className="flex items-center gap-1 text-red-400 font-medium"><X />Cancel Setup</Link>
-                <Link to={'/'} className="flex items-center gap-1 text-primary font-medium"><LucideMessageCircleQuestion /> Help</Link>
+                <Link to={'/'} className="flex items-center gap-1 text-red-400 font-medium">{t('components.setup.cancel')}</Link>
+                <Link to={'/'} className="flex items-center gap-1 text-primary font-medium"><LucideCircleHelp /></Link>
             </div>
 
             {/* content */}
@@ -77,28 +80,31 @@ export const SetupComponent = () => {
             </div>
 
             {/* navigation */}
-            <div className="flex items-center justify-center gap-2">
-                <Button
-                    variant="faded"
-                    className="bg-zinc-950 text-zinc-50 flex items-center justify-center"
+            <div className="flex items-center justify-between gap-2">
+                <HeroLink
+                    as={Button}
+                    variant={"light"}
+                    className="text-zinc-50 flex items-center justify-center"
                     onPress={() => {
                         setStep(step - 1 as Step)
                     }}
-                    title="Back"
+                    title={t('components.setup.back')}
                     isDisabled={step === 1}
                     startContent={<ChevronLeft />}
                 >
-                    Back
-                </Button>
+                    {t('components.setup.back')}
+                </HeroLink>
 
                 <Button
-                    variant="faded"
-                    className="bg-zinc-950 text-zinc-50"
+                    variant="solid"
+                    className={`bg-background2 text-text text-xl ring-2 ring-primary ${step === 6 ? 'hidden' : ''}`}
                     onPress={() => setStep(step + 1 as Step)}
                     isDisabled={(step === 2 && name.length < 3) || (step === 6)}
-                    endContent={<ChevronRight />}
                 >
-                    Next
+                    <span className="flex items-center justify-center gap-2">
+                        {(step === 1 || step === 2 || step === 3 || step === 5) ? t('components.setup.confirm') : t('components.setup.next')}
+
+                    </span>
                 </Button>
             </div>
 
