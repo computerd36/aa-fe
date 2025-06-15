@@ -1,8 +1,9 @@
 import { CircleAlert, CircleCheck, CircleHelp, CircleX } from "lucide-react";
+import { StatusType } from "../resources";
 
 
 interface StatusIconComponentProps {
-    status: 'operational' | 'degraded' | 'down';
+    status: StatusType;
     className?: string;
 }
 
@@ -10,13 +11,13 @@ export const StatusIconComponent = ({ status, className }: StatusIconComponentPr
     let iconColor: string;
 
     switch (status) {
-        case 'operational':
+        case 'ok':
             iconColor = 'text-green-500';
             return <CircleCheck className={`${iconColor} ${className}`} />;
-        case 'degraded':
+        case 'warning':
             iconColor = 'text-yellow-500';
             return <CircleAlert className={`${iconColor} ${className}`} />;
-        case 'down':
+        case 'error':
             iconColor = 'text-red-500';
             return <CircleX className={`${iconColor} ${className}`} />;
         default:

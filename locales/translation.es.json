@@ -30,7 +30,7 @@
       },
       "step4": {
         "title": "Descargar Pushsafer",
-        "subtitle": "Para recibir alertas críticas, primero debes descargar Pushsafer y completar el proceso de configuración. Una vez hecho esto, puedes volver a esta página.",
+        "subtitle": "Para que AlertAigües funcione, debe descargar Pushsafer y habilitar las notificaciones normales y críticas. Los servicios de ubicación no son necesarios y pueden permanecer deshabilitados. Al terminar, regrese a esta página. Si ya lo hizo, puede omitir este paso.",
         "pushsaferForIos": "Pushsafer para iOS",
         "pushsaferForAndroid": "Pushsafer para Android"
       },

@@ -30,7 +30,7 @@
       },
       "step4": {
         "title": "Descarregar Pushsafer",
-        "subtitle": "Per rebre alertes crítiques, primer heu de descarregar Pushsafer i completar el procés de configuració. Un cop fet això, podeu tornar a aquesta pàgina.",
+        "subtitle": "Perquè AlertAigües funcioni, heu de descarregar Pushsafer i permetre les notificacions normals i crítiques. Els serveis de localització no són necessaris i poden romandre desactivats. Quan hàgiu acabat, torneu a aquesta pàgina. Si ja ho heu fet, podeu ometre aquest pas.",
         "pushsaferForIos": "Pushsafer per a iOS",
         "pushsaferForAndroid": "Pushsafer per a Android"
       },

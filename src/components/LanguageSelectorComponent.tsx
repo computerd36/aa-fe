@@ -24,7 +24,7 @@ export const LanguageSelectorComponent = () => {
         >
             <DropdownTrigger
                 aria-label="Language Selector"
-                className="cursor-pointer"
+                className="cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-zinc-900 rounded-full"
             >
                 <Avatar className='h-8 w-8' src={getFlagIconURL(language.icon)} />
             </DropdownTrigger>

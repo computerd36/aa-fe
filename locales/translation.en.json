@@ -17,7 +17,10 @@
       },
       "step2": {
         "howShouldWeCallYou": "How should we call you?",
-        "yourName": "Your name"
+        "yourName": "Your name",
+        "min3chars": "Must be at least 3 characters long.",
+        "max20chars": "Must be at most 20 characters long.",
+        "onlyLettersAndNumbers": "Only letters and numbers are allowed."
       },
       "step3": {
         "setAlertThreshold": "Set Alert Threshold",
@@ -30,7 +33,7 @@
       },
       "step4": {
         "title": "Download Pushsafer",
-        "subtitle": "To receive critical alerts, you must first download Pushsafer and complete the setup process. Once this is done, you can return to this page.",
+        "subtitle": "For AlertAigües to work, you need to download Pushsafer and grant permission for both normal and critical notifications. Location services are not required and can remain disabled. When you are finished, return to this page. If you have already done this, you can skip this step.",
         "pushsaferForIos": "Pushsafer for iOS",
         "pushsaferForAndroid": "Pushsafer for Android"
       },

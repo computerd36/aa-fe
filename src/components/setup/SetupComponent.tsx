@@ -1,7 +1,7 @@
 import { ChevronLeft, LucideCircleHelp } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Button, Link as HeroLink } from "@heroui/react";
+import { Button } from "@heroui/react";
 import { SetupStep2 } from "./SetupStep2";
 import { SetupStep3 } from "./SetupStep3";
 import { SetupStep4 } from "./SetupStep4";
@@ -9,25 +9,21 @@ import { SetupStep5 } from "./SetupStep5";
 import { SetupStep6 } from "./SetupStep6";
 import { SetupStep1 } from "./SetupStep1";
 import { useTranslation } from "react-i18next";
+import { isValidInput } from "../../utils/Validator";
 
 
 export type Step = 1 | 2 | 3 | 4 | 5 | 6;
 export type Metric = 'level' | 'flowrate';
 
 export const SetupComponent = () => {
-
     const { t } = useTranslation();
 
     const [step, setStep] = useState<Step>(1);
-
 
     // form states
     const [name, setName] = useState<string>('');
     const [metrics, setMetrics] = useState<Metric>('level');
     const [metricValue, setMetricValue] = useState<number>(1.5);
-
-
-
 
     const renderSteps = (step: Step) => {
         switch (step) {
@@ -81,8 +77,7 @@ export const SetupComponent = () => {
 
             {/* navigation */}
             <div className="flex items-center justify-between gap-2">
-                <HeroLink
-                    as={Button}
+                <Button
                     variant={"light"}
                     className="text-zinc-50 flex items-center justify-center"
                     onPress={() => {
@@ -93,13 +88,15 @@ export const SetupComponent = () => {
                     startContent={<ChevronLeft />}
                 >
                     {t('components.setup.back')}
-                </HeroLink>
+                </Button>
 
                 <Button
                     variant="solid"
                     className={`bg-background2 text-text text-xl ring-2 ring-primary ${step === 6 ? 'hidden' : ''}`}
-                    onPress={() => setStep(step + 1 as Step)}
-                    isDisabled={(step === 2 && name.length < 3) || (step === 6)}
+                    onPress={() => {
+                        setStep(step + 1 as Step)
+                    }}
+                    isDisabled={(step === 2 && !isValidInput(name).isValid) || (step === 6)}
                 >
                     <span className="flex items-center justify-center gap-2">
                         {(step === 1 || step === 2 || step === 3 || step === 5) ? t('components.setup.confirm') : t('components.setup.next')}

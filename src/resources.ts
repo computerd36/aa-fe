@@ -12,3 +12,11 @@ export interface Language {
     name: string;
     icon: string;
 }
+
+export type StatusType = "ok" | "warning" | "error";
+
+export type AlertAiguaStatus = {
+    aa_status: StatusType;
+    pushsafer_status: StatusType;
+    saihebro_status: StatusType;
+}

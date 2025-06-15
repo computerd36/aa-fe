@@ -14,7 +14,7 @@ interface SetupStep3Props {
 
 export const SetupStep3 = ({ metric, setMetric, metricValue, setMetricValue }: SetupStep3Props) => {
     const { t } = useTranslation();
-    
+
     const formatDischarge = (v: number): React.ReactNode =>
         metric === 'level'
             ? `${new Intl.NumberFormat(undefined, {
@@ -32,14 +32,10 @@ export const SetupStep3 = ({ metric, setMetric, metricValue, setMetricValue }: S
             }).format(v)}\u00B3/s`;
 
     useEffect(() => {
-        // Ensure metricValue is within bounds when metric changes
-        if (metric === 'level') {
-            if (metricValue < 0.5 || metricValue > 4) setMetricValue(0.5);
-        } else {
-            if (metricValue < 5) setMetricValue(5);
-            if (metricValue > 200) setMetricValue(200);
-        }
-    }, [metric, metricValue, setMetricValue]);
+        // ensure metricValue is reset to default value if switch between metrics
+        if (metric === 'level') setMetricValue(1.5);
+        else if (metric === 'flowrate') setMetricValue(20);
+    }, [metric, setMetricValue]);
 
     return (
         <div className="w-full">

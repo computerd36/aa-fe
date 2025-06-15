@@ -27,7 +27,7 @@ export const NavbarComponent = () => {
         >
             <NavbarBrand>
                 <Link to={'/'}>
-                    <p className="text-2xl text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary break-keep font-rubik font-medium text-inherit">AlertAigües</p>
+                    <p className="text-2xl text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary break-keep font-rubik font-medium text-inherit">AlertAigua</p>
                 </Link>
             </NavbarBrand>
 
