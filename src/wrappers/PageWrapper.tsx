@@ -11,7 +11,7 @@ export const PageWrapper = ({ children, isLanding }: PageWrapperProps) => {
         <div className={`relative min-h-dvh flex flex-col bg-background1 ${isLanding && 'overflow-hidden'}`}>
             <NavbarComponent />
 
-            <div className={`flex flex-col items-center flex-grow ${isLanding ? 'px-0 py-0' : 'px-16 py-8'}`}>
+            <div className={`flex flex-col items-center flex-grow ${isLanding ? 'px-0 py-0' : 'px-4 px-2 md:px-16 md:py-8'}`}>
                 {children}
             </div>
         </div>

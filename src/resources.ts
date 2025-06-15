@@ -13,7 +13,7 @@ export interface Language {
     icon: string;
 }
 
-export type StatusType = "ok" | "warning" | "error";
+export type StatusType = "ok" | "warning" | "error" | "loading" | "unknown";
 
 export type AlertAiguaStatus = {
     aa_status: StatusType;

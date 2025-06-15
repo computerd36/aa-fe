@@ -1,4 +1,4 @@
-import { CircleAlert, CircleCheck, CircleHelp, CircleX } from "lucide-react";
+import { CircleAlert, CircleCheck, CircleHelp, CircleX, LoaderCircle } from "lucide-react";
 import { StatusType } from "../resources";
 
 
@@ -11,6 +11,9 @@ export const StatusIconComponent = ({ status, className }: StatusIconComponentPr
     let iconColor: string;
 
     switch (status) {
+        case 'loading':
+            iconColor = 'text-gray-500';
+            return <LoaderCircle className={`${iconColor} ${className} animate-spin`} />;
         case 'ok':
             iconColor = 'text-green-500';
             return <CircleCheck className={`${iconColor} ${className}`} />;
