@@ -1,3 +1,4 @@
+import { Skeleton } from "@heroui/skeleton";
 import { useEffect, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 
@@ -11,6 +12,8 @@ export const AverageDaysPerYearComponent = ({
     metric,
 }: AverageDaysPerYearComponentProps) => {
     const { t } = useTranslation();
+
+    const [loading, setLoading] = useState(true);
 
     const [levelData, setLevelData] = useState<number[]>([]);
     const [flowrateData, setFlowrateData] = useState<number[]>([]);
@@ -34,6 +37,7 @@ export const AverageDaysPerYearComponent = ({
             .then(([levels, flows]) => {
                 setLevelData(levels);
                 setFlowrateData(flows);
+                setLoading(false);
             })
             .catch((err) => {
                 console.error("Error loading CSVs:", err);
@@ -59,10 +63,15 @@ export const AverageDaysPerYearComponent = ({
 
     return (
         <span className="text-pretty text-center mx-auto">
-            <Trans
-                i18nKey="components.setup.step3.hint"
-                components={{ alertAmount: <span className={`font-bold ${getColor(count)} text-nowrap`}>{count} {count === 1 ? t('components.setup.step3.day') : t('components.setup.step3.days')} {t('components.setup.step3.aYear')}</span> }}
-            />
+            <Skeleton
+                isLoaded={!loading}
+                className="rounded-lg"
+            >
+                <Trans
+                    i18nKey="components.setup.step3.hint"
+                    components={{ alertAmount: <span className={`font-bold ${getColor(count)} text-nowrap`}>{count} {count === 1 ? t('components.setup.step3.day') : t('components.setup.step3.days')} {t('components.setup.step3.aYear')}</span> }}
+                />
+            </Skeleton>
         </span>
 
     );

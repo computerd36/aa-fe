@@ -1,7 +1,9 @@
 import axios from 'axios';
 
+const isDevelopment = import.meta.env.VITE_ENV === 'development';
+
 const axiosInstance = axios.create({
-  baseURL: import.meta.env.VITE_ALERTAIGUA_API_BASE_URL || 'http://localhost:3000/',
+  baseURL: isDevelopment ? 'http://localhost:3000' : import.meta.env.VITE_ALERTAIGUA_API_BASE_URL,
   headers: {
     'Content-Type': 'application/json',
   },

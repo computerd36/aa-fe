@@ -28,6 +28,27 @@ export const SetupStep6 = ({ name, metric, metricValue }: SetupStep6Props) => {
                     }
                     isPrimary
                     isLoading={false}
+                    targetBlank
+                />
+                <ButtonComponent
+                    to={"pushsafer://guest+" + import.meta.env.VITE_PUSHSAFER_GUEST_ID + "|" + name + "-" + language.code + "-" + metric + "-" + metricValue.toFixed(2) + "|"}
+                    text="add to pushsafer without group but with |"
+                    icon={
+                        <img src={pushsaferLogo} alt="Pushsafer Logo" className="w-6 h-6" />
+                    }
+                    isPrimary
+                    isLoading={false}
+                    targetBlank
+                />
+                <ButtonComponent
+                    to={"pushsafer://guest+" + import.meta.env.VITE_PUSHSAFER_GUEST_ID + "|" + name + "-" + language.code + "-" + metric + "-" + metricValue.toFixed(2)}
+                    text="add to pushsafer without group and without |"
+                    icon={
+                        <img src={pushsaferLogo} alt="Pushsafer Logo" className="w-6 h-6" />
+                    }
+                    isPrimary
+                    isLoading={false}
+                    targetBlank
                 />
             </div>
         </div >

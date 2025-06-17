@@ -8,10 +8,11 @@ interface ButtonComponentProps {
     onPress?: () => void,
     to?: string,
     isPrimary?: boolean,
-    isLoading?: boolean
+    isLoading?: boolean,
+    targetBlank?: boolean,
 }
 
-export const ButtonComponent = ({ icon, text, onPress, to, isPrimary, isLoading = false }: ButtonComponentProps) => {
+export const ButtonComponent = ({ icon, text, onPress, to, isPrimary, isLoading = false, targetBlank = false }: ButtonComponentProps) => {
     if (isLoading) {
         return (
             <Button isLoading color="primary" variant="faded" className={`flex items-center gap-2 text-md md:text-xl bg-zinc-950 text-zinc-50 px-4 py-2 ${isPrimary ? 'border-primary text-primary' : ''}`}>
@@ -31,7 +32,10 @@ export const ButtonComponent = ({ icon, text, onPress, to, isPrimary, isLoading 
     }
 
     return (
-        <Button as={Link} to={to} color="primary" variant="faded" className={`flex items-center gap-2 text-md md:text-xl bg-zinc-950 text-zinc-50 px-4 py-2 ${isPrimary ? 'border-primary text-primary' : ''}`}>
+        <Button
+            as={Link} to={to}
+            target={targetBlank ? "_blank" : "_self"}
+            color="primary" variant="faded" className={`flex items-center gap-2 text-md md:text-xl bg-zinc-950 text-zinc-50 px-4 py-2 ${isPrimary ? 'border-primary text-primary' : ''}`}>
             <span className="min-h-6 min-w-6 flex items-center">{icon}</span>
             <span>{text}</span>
         </Button>
