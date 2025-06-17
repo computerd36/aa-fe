@@ -24,6 +24,7 @@ export const SetupComponent = () => {
     const [name, setName] = useState<string>('');
     const [metrics, setMetrics] = useState<Metric>('level');
     const [metricValue, setMetricValue] = useState<number>(1.5);
+    
 
     const renderSteps = (step: Step) => {
         switch (step) {

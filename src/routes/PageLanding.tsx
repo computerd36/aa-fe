@@ -2,6 +2,7 @@ import { BookText, LogIn } from "lucide-react"
 
 // images 
 import logoSAIH from "../assets/saihebro.svg"
+import logoArens from "../assets/arensdelledo_wtext.svg"
 
 import { PageWrapper } from "../wrappers/PageWrapper"
 import { ButtonComponent } from "../components/ButtonComponent"
@@ -30,6 +31,9 @@ export const PageLanding = () => {
                 >
                     <h1 className="text-4xl md:text-5xl xl:text-6xl 2xl:text-8xl font-medium text-center text-zinc-50 pb-2"><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary font-bold">{t('pages.landing.realTimeAlerts')}</span><br />{t('pages.landing.viaYourPhone')}</h1>
                     <h2 className="text-sm md:text-md xl:text-xl 2xl:text-2xl text-center text-zinc-200 text-balance">{t('pages.landing.subtitle')}</h2>
+
+
+
                     <div className="w-full flex gap-4 mt-4 justify-center">
                         <ButtonComponent
                             icon={<LogIn />}
@@ -43,11 +47,16 @@ export const PageLanding = () => {
                             to="/how"
                         />
                     </div>
-                    <div className="w-full flex items-center justify-center mt-8 gap-8">
+
+                    <div className="w-full flex items-center justify-center mt-6 gap-10">
                         <div>
-                            <h3 className="text-xs text-center text-zinc-200">{t('pages.landing.dataProvidedBy')}</h3>
+                            <a href="https://arensdelledo.es" target="_blank" rel="noreferrer">
+                                <img src={logoArens} alt="logo" className="mx-auto h-[44px]" />
+                            </a>
+                        </div>
+                        <div>
                             <a href="https://www.saihebro.com" target="_blank" rel="noreferrer">
-                                <img src={logoSAIH} alt="logo" className="mt-2 mx-auto h-6" />
+                                <img src={logoSAIH} alt="logo" className="mx-auto h-7" />
                             </a>
                         </div>
                     </div>
