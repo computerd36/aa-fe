@@ -7,16 +7,21 @@ import { getStatus } from "../backend/status";
 
 export const PageStatus = () => {
     const [status, setStatus] = useState<AlertAiguaStatus>({
-        aa_status: "loading",
-        pushsafer_status: "loading",
-        saihebro_status: "loading"
+        saihebro_api: "loading",
+        saihebro_station: "loading",
+        pushsafer_api: "loading",
+        pushsafer_iosApp: "loading",
+        pushsafer_androidApp: "loading",
     });
 
     // total status based on the individual statuses
     const totalStatus = Object.values(status).every(s => s === "ok") ? "ok" :
-        Object.values(status).some(s => s === "loading") ? "loading" :
-            Object.values(status).some(s => s === "error") ? "error" :
-                Object.values(status).some(s => s === "warning") ? "warning" : "unknown";
+        Object.values(status).some(s => s === "error") ? "error" :
+            Object.values(status).some(s => s === "warning") ? "warning" :
+                Object.values(status).some(s => s === "loading") ? "loading" :
+                    "unknown";
+
+
 
     useEffect(() => {
         const fetchStatus = async () => {
@@ -52,23 +57,37 @@ export const PageStatus = () => {
                 <div>
                     <div className="flex flex-col gap-4 mt-8 w-full lg:w-2/3 mx-auto">
                         <div className="bg-zinc-800 p-4 rounded-lg shadow-md flex flex-row items-center justify-between">
-                            <span className="text-md md:text-lg xl:text-xl text-gray-300">AlertAigua Service</span>
-                            <StatusIconComponent
-                                status={status.aa_status}
-                                className="w-8 h-8"
-                            />
-                        </div>
-                        <div className="bg-zinc-800 p-4 rounded-lg shadow-md flex flex-row items-center justify-between">
-                            <span className="text-md md:text-lg xl:text-xl text-gray-300">Pushsafer Service</span>
-                            <StatusIconComponent
-                                status={status.pushsafer_status}
-                                className="w-8 h-8"
-                            />
-                        </div>
-                        <div className="bg-zinc-800 p-4 rounded-lg shadow-md flex flex-row items-center justify-between">
                             <span className="text-md md:text-lg xl:text-xl text-gray-300">SAIH Ebro API</span>
                             <StatusIconComponent
-                                status={status.saihebro_status}
+                                status={status.saihebro_api}
+                                className="w-8 h-8"
+                            />
+                        </div>
+                        <div className="bg-zinc-800 p-4 rounded-lg shadow-md flex flex-row items-center justify-between">
+                            <span className="text-md md:text-lg xl:text-xl text-gray-300">SAIH Ebro Station</span>
+                            <StatusIconComponent
+                                status={status.saihebro_station}
+                                className="w-8 h-8"
+                            />
+                        </div>
+                        <div className="bg-zinc-800 p-4 rounded-lg shadow-md flex flex-row items-center justify-between">
+                            <span className="text-md md:text-lg xl:text-xl text-gray-300">Pushsafer API</span>
+                            <StatusIconComponent
+                                status={status.pushsafer_api}
+                                className="w-8 h-8"
+                            />
+                        </div>
+                        <div className="bg-zinc-800 p-4 rounded-lg shadow-md flex flex-row items-center justify-between">
+                            <span className="text-md md:text-lg xl:text-xl text-gray-300">Pushsafer iOS App</span>
+                            <StatusIconComponent
+                                status={status.pushsafer_iosApp}
+                                className="w-8 h-8"
+                            />
+                        </div>
+                        <div className="bg-zinc-800 p-4 rounded-lg shadow-md flex flex-row items-center justify-between">
+                            <span className="text-md md:text-lg xl:text-xl text-gray-300">Pushsafer Android App</span>
+                            <StatusIconComponent
+                                status={status.pushsafer_androidApp}
                                 className="w-8 h-8"
                             />
                         </div>

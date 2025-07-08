@@ -31,7 +31,12 @@ export const SetupStep5 = ({ name, metric, metricValue }: SetupStep5Props) => {
                         <tr>
                             <td className="py-1 px-2">{t('components.setup.step5.metricType')}:</td>
                             <td className="py-1 px-2 font-bold text-right">
-                                {metric.charAt(0).toUpperCase() + metric.slice(1)}
+                                {
+                                    metric === "level" ?
+                                        t('components.setup.step3.waterLevel')
+                                        :
+                                        t('components.setup.step3.flowRate')
+                                }
                             </td>
                         </tr>
                         <tr>

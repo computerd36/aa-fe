@@ -15,8 +15,11 @@ export interface Language {
 
 export type StatusType = "ok" | "warning" | "error" | "loading" | "unknown";
 
+
 export type AlertAiguaStatus = {
-    aa_status: StatusType;
-    pushsafer_status: StatusType;
-    saihebro_status: StatusType;
-}
+    pushsafer_api: StatusType;
+    pushsafer_iosApp: StatusType;
+    pushsafer_androidApp: StatusType;
+    saihebro_api: StatusType;
+    saihebro_station: StatusType;
+};
