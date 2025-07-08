@@ -16,9 +16,11 @@ export async function getStatus(): Promise<AlertAiguaStatus> {
         console.error('Error fetching status:', error);
 
         return {
-            aa_status: "error",
-            pushsafer_status: "error",
-            saihebro_status: "error"
+            pushsafer_api: "error",
+            pushsafer_iosApp: "error",
+            pushsafer_androidApp: "error",
+            saihebro_api: "error",
+            saihebro_station: "error",
         };
     }
 };
