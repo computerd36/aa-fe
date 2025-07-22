@@ -29,7 +29,7 @@ export const PageLanding = () => {
                     }}
                     transition={{ type: "spring", stiffness: 200, duration: 0.3 }}
                 >
-                    <h1 className="text-4xl md:text-5xl xl:text-6xl 2xl:text-8xl font-medium text-center text-zinc-50 pb-2"><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary font-bold">{t('pages.landing.realTimeAlerts')}</span><br />{t('pages.landing.viaYourPhone')}</h1>
+                    <h1 className="text-4xl md:text-5xl xl:text-6xl 2xl:text-8xl font-medium text-center text-zinc-50 text-balance pb-2"><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary font-bold">{t('pages.landing.realTimeAlerts')}</span><br />{t('pages.landing.viaYourPhone')}</h1>
                     <h2 className="text-sm md:text-md xl:text-xl 2xl:text-2xl text-center text-zinc-200 text-balance">{t('pages.landing.subtitle')}</h2>
 
 

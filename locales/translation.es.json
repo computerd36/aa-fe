@@ -44,7 +44,8 @@
       "step6": {
         "addToPushsafer": "Añadir a Pushsafer",
         "subtitle": "Si has instalado Pushsafer, haz clic en este botón para añadir automáticamente tu cuenta configurada a Pushsafer. Luego recibirás una notificación para verificar que tu sistema de alerta funciona.",
-        "addAaToPushsafer": "Añadir AlertAigües a Pushsafer"
+        "addAaToPushsafer": "Añadir AlertAigües a Pushsafer",
+        "qrCodeTitle": "Escanea este código QR con la aplicación Pushsafer para completar la configuración."
       }
     }
   },
@@ -60,9 +61,9 @@
   },
   "general": {
     "languages": {
-      "english": "Inglés",
+      "english": "English",
       "spanish": "Español",
-      "catalan": "Catalán"
+      "catalan": "Català"
     }
   }
 }

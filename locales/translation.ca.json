@@ -44,7 +44,8 @@
       "step6": {
         "addToPushsafer": "Afegir a Pushsafer",
         "subtitle": "Si heu instal·lat Pushsafer, feu clic en aquest botó per afegir automàticament el vostre compte configurat a Pushsafer. Llavors rebreu una notificació per verificar que el vostre sistema d'alerta funciona.",
-        "addAaToPushsafer": "Afegir AlertAigües a Pushsafer"
+        "addAaToPushsafer": "Afegir AlertAigües a Pushsafer",
+        "qrCodeTitle": "Escaneja aquest codi QR amb l'aplicació Pushsafer per completar la configuració."
       }
     }
   },
@@ -60,8 +61,8 @@
   },
   "general": {
     "languages": {
-      "english": "Anglès",
-      "spanish": "Castellà",
+      "english": "English",
+      "spanish": "Español",
       "catalan": "Català"
     }
   }

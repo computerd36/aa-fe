@@ -33,7 +33,8 @@ export const ButtonComponent = ({ icon, text, onPress, to, isPrimary, isLoading 
 
     return (
         <Button
-            as={Link} to={to}
+            as={Link} 
+            to={to}
             target={targetBlank ? "_blank" : "_self"}
             color="primary" variant="faded" className={`flex items-center gap-2 text-md md:text-xl bg-zinc-950 text-zinc-50 px-4 py-2 ${isPrimary ? 'border-primary text-primary' : ''}`}>
             <span className="min-h-6 min-w-6 flex items-center">{icon}</span>

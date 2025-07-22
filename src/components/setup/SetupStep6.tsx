@@ -1,11 +1,7 @@
 import { useTranslation } from "react-i18next";
-import { useLanguage } from "../../context/languageContext";
 
 import { Metric } from "./SetupComponent"
-import { ButtonComponent } from "../ButtonComponent";
-import { generatePushsaferSignupLink } from "../../utils/pushsafer";
-
-import pushsaferLogo from "../../assets/pushsafer.webp"
+import { PushsaferButtonOrQR } from "../PushsaferButtonOrQR";
 
 interface SetupStep6Props {
     name: string,
@@ -13,25 +9,33 @@ interface SetupStep6Props {
     metricValue: number,
 }
 
+
+
 export const SetupStep6 = ({ name, metric, metricValue }: SetupStep6Props) => {
-    const { language } = useLanguage();
     const { t } = useTranslation();
+
+
+    // get the device type (ios, android, pc) based on the user agent
+    const userAgent = navigator.userAgent.toLowerCase();
+    let device: "android" | "ios" | "pc" = "pc";
+    if (userAgent.includes("android")) {
+        device = "android";
+    } else if (userAgent.includes("iphone") || userAgent.includes("ipad")) {
+        device = "ios";
+    }
+
+
 
     return (
         <div className="w-full">
             <h2 className="text-3xl text-center font-medium text-zinc-50 mb-2">{t('components.setup.step6.addToPushsafer')}</h2>
             <h3 className="text-sm text-center text-zinc-200 text-balance mb-6">{t('components.setup.step6.subtitle')}</h3>
             <div className="flex flex-col items-center gap-5 text-zinc-100 py-2">
-                <ButtonComponent
-                    // to={"pushsafer://guest+" + import.meta.env.VITE_PUSHSAFER_GUEST_ID + "|" + name + "-" + language.code + "-" + metric + "-" + metricValue.toFixed(2) + "|"}
-                    to={generatePushsaferSignupLink(name, language.code, metric, metricValue)}
-                    text={t('components.setup.step6.addAaToPushsafer')}
-                    icon={
-                        <img src={pushsaferLogo} alt="Pushsafer Logo" className="w-6 h-6" />
-                    }
-                    isPrimary
-                    isLoading={false}
-                    targetBlank
+                <PushsaferButtonOrQR
+                    name={name}
+                    metric={metric}
+                    metricValue={metricValue}
+                    device={device}
                 />
             </div>
         </div >

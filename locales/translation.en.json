@@ -47,7 +47,8 @@
       "step6": {
         "addToPushsafer": "Add to Pushsafer",
         "subtitle": "If you have installed Pushsafer, click this button to automatically add your configured account to Pushsafer. You will then receive a notification to check that your warning system is working.",
-        "addAaToPushsafer": "Add AlertAigües to Pushsafer"
+        "addAaToPushsafer": "Add AlertAigua to Pushsafer",
+        "qrCodeTitle": "Scan this QR code with the Pushsafer app to add complete the setup."
       }
     }
   },
@@ -64,8 +65,8 @@
   "general": {
     "languages": {
       "english": "English",
-      "spanish": "Spanish",
-      "catalan": "Catalan"
+      "spanish": "Español",
+      "catalan": "Català"
     }
   }
 }
