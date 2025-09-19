@@ -34,7 +34,7 @@ export const SetupStep6 = ({ name, metric, metricValue }: SetupStep6Props) => {
                 <PushsaferButtonOrQR
                     name={name}
                     metric={metric}
-                    metricValue={metricValue}
+                    metricValue={metricValue * 100}
                     device={device}
                 />
             </div>

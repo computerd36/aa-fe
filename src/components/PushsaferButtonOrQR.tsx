@@ -51,7 +51,6 @@ export const PushsaferButtonOrQR: React.FC<PushsaferButtonOrQRProps> = ({
                 <>
                     <h3 className="text-sm text-center text-zinc-200 text-balance mb-2">{t('components.setup.step6.qrCodeTitle')}</h3>
                     <QRCode
-                        size={256}
                         value={import.meta.env.VITE_PUSHSAFER_GUEST_ID + `|${name}-${language.code}-${metric}-${metricValue}|`}
                         className="max-w-64 max-h-64"
                         title={t('components.setup.step6.qrCodeTitle')}
