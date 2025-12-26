@@ -9,7 +9,7 @@
  */
 export function generatePushsaferSignupLink(name: string, languageCode: string, metric: string, metricValue: number): string {
     const guestId = import.meta.env.VITE_PUSHSAFER_GUEST_ID;
-    const deviceName = `${name}-${languageCode}-${metric}-${metricValue.toFixed(1)}`;
+    const deviceName = `${name}-${languageCode}-${metric}-${Math.round(metricValue)}`;
 
     return `pushsafer://guest+${guestId}|${deviceName}|`;
 }

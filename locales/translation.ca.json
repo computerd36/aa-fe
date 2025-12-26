@@ -7,7 +7,7 @@
       "getStarted": "Començar"
     },
     "setup": {
-      "cancel": "Cancel·lar",
+      "cancel": "Cancellar",
       "back": "Enrere",
       "next": "Següent",
       "confirm": "Confirmar",
@@ -43,9 +43,11 @@
       },
       "step6": {
         "addToPushsafer": "Afegir a Pushsafer",
-        "subtitle": "Si heu instal·lat Pushsafer, feu clic en aquest botó per afegir automàticament el vostre compte configurat a Pushsafer. Llavors rebreu una notificació per verificar que el vostre sistema d'alerta funciona.",
-        "addAaToPushsafer": "Afegir AlertAigües a Pushsafer",
-        "qrCodeTitle": "Escaneja aquest codi QR amb l'aplicació Pushsafer per completar la configuració."
+        "subtitle": "Seguiu les instruccions per afegir el vostre dispositiu a Pushsafer i completar la configuració. Rebreu una notificació per confirmar la connexió.",
+        "addAaToPushsafer": "Afegir AlertAigua a Pushsafer",
+        "warningHint": "Assegureu-vos de tenir l'aplicació Pushsafer installada en aquest dispositiu.",
+        "qrCodeTitle": "Obre l'aplicació Pushsafer <Arrow /> Desplaça't cap avall fins a 'Registra un dispositiu convidat' <Arrow /> Fes clic a 'Escaneja el codi QR' <Arrow /> Escaneja aquest codi:",
+        "buttonTitle": "Si heu installat Pushsafer, feu clic en aquest botó per obrir automàticament Pushsafer i afegir el vostre compte configurat. A continuació, rebreu una notificació per verificar que el vostre sistema d'alerta funciona:"
       }
     }
   },

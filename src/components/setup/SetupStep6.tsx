@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 
 import { Metric } from "./SetupComponent"
 import { PushsaferButtonOrQR } from "../PushsaferButtonOrQR";
+import { useDeviceType } from "../../hooks/useDeviceType";
 
 interface SetupStep6Props {
     name: string,
@@ -13,18 +14,7 @@ interface SetupStep6Props {
 
 export const SetupStep6 = ({ name, metric, metricValue }: SetupStep6Props) => {
     const { t } = useTranslation();
-
-
-    // get the device type (ios, android, pc) based on the user agent
-    const userAgent = navigator.userAgent.toLowerCase();
-    let device: "android" | "ios" | "pc" = "pc";
-    if (userAgent.includes("android")) {
-        device = "android";
-    } else if (userAgent.includes("iphone") || userAgent.includes("ipad")) {
-        device = "ios";
-    }
-
-
+    const device = useDeviceType();
 
     return (
         <div className="w-full">
