@@ -62,6 +62,26 @@
       "dataProvidedBy": "Data provided by",
       "getStarted": "Get Started",
       "learnMore": "Learn More"
+    },
+    "how": {
+      "steps": {
+        "step1": {
+          "title": "Download Pushsafer",
+          "description": "AlertAigua delivers its notifications through Pushsafer, a trusted push-notification service. Grab it free from your app store and open it once to create your device key."
+        },
+        "step2": {
+          "title": "Configure your alarm settings",
+          "description": "In the AlertAigua setup, choose which water level and flow values should trigger an alert. Set your own thresholds so you only hear about changes that actually matter to you."
+        },
+        "step3": {
+          "title": "Add AlertAigua to Pushsafer",
+          "description": "Link the two with a single tap — press the “Add to Pushsafer” button, or scan the QR code from your phone. That’s the whole connection; no copying keys by hand."
+        },
+        "step4": {
+          "title": "Receive alerts when flooding threatens",
+          "description": "After your setup is complete, you’re set. The moment river levels cross your thresholds, AlertAigua pushes a critical notification straight to your phone — day or night — so you can act before the water reaches you."
+        }
+      }
     }
   },
   "general": {

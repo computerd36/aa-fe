@@ -3,6 +3,7 @@ import { PageLanding } from "./routes/PageLanding"
 import { PageSetup } from "./routes/PageSetup"
 import { PageStatus } from "./routes/PageStatus";
 import { LanguageProvider } from "./context/languageContext";
+import { PageHow } from "./routes/PageHow";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<PageLanding />} />
           <Route path="/setup" element={<PageSetup />} />
           <Route path="/status" element={<PageStatus />} />
+          <Route path="/how" element={<PageHow />} />
         </Routes>
       </LanguageProvider >
     </main>
