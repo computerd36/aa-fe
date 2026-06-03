@@ -17,9 +17,5 @@ export type StatusType = "ok" | "warning" | "error" | "loading" | "unknown";
 
 
 export type AlertAiguaStatus = {
-    pushsafer_api: StatusType;
-    pushsafer_iosApp: StatusType;
-    pushsafer_androidApp: StatusType;
-    saihebro_api: StatusType;
-    saihebro_station: StatusType;
+    [key: string]: StatusType;
 };

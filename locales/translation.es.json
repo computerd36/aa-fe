@@ -66,6 +66,14 @@
       "english": "English",
       "spanish": "Español",
       "catalan": "Català"
+    },
+    "status": {
+      "statusFor": "Estado de",
+      "ok": "Todos los sistemas operativos",
+      "warning": "Algunos servicios tienen problemas",
+      "error": "Algunos servicios están caídos",
+      "loading": "Cargando estado...",
+      "unknown": "Estado desconocido"
     }
   }
 }

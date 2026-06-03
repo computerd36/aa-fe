@@ -69,6 +69,14 @@
       "english": "English",
       "spanish": "Español",
       "catalan": "Català"
+    },
+    "status": {
+      "statusFor": "Status for",
+      "ok": "All systems operational",
+      "warning": "Services have issues",
+      "error": "Services are down",
+      "loading": "Loading status...",
+      "unknown": "Unknown status"
     }
   }
 }

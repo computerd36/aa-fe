@@ -1,3 +1,4 @@
+import { StatusSystems } from "../constants";
 import { AlertAiguaStatus } from "../resources";
 import axiosInstance from "./axiosInstance";
 
@@ -10,17 +11,14 @@ import axiosInstance from "./axiosInstance";
  */
 export async function getStatus(): Promise<AlertAiguaStatus> {
     try {
-        const response = await axiosInstance.get('/status');
+        const response = await axiosInstance.get<AlertAiguaStatus>('/status');
         return response.data;
     } catch (error) {
         console.error('Error fetching status:', error);
-
-        return {
-            pushsafer_api: "error",
-            pushsafer_iosApp: "error",
-            pushsafer_androidApp: "error",
-            saihebro_api: "error",
-            saihebro_station: "error",
-        };
+        // all err if request fails
+        return StatusSystems.reduce((acc, system) => {
+            acc[system.key] = "error";
+            return acc;
+        }, {} as AlertAiguaStatus);
     }
 };
