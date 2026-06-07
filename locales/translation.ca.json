@@ -7,7 +7,7 @@
       "getStarted": "Començar"
     },
     "setup": {
-      "cancel": "Cancellar",
+      "cancel": "Cancel·lar",
       "back": "Enrere",
       "next": "Següent",
       "confirm": "Confirmar",
@@ -83,6 +83,36 @@
         "emailLabel": "Envia un correu"
       }
     },
+    "how": {
+      "title": {
+        "prefix": "Com",
+        "suffix": "funciona"
+      },
+      "subtitle": "Quatre passos senzills i el teu telèfon es converteix en un sistema d'alerta primerenca d'inundacions. Sense crear compte, sense maquinari. Només notificacions push en el moment en què puja l'aigua.",
+      "cta": {
+        "prefix": "Llest en menys de",
+        "highlight": "cinc minuts."
+      },
+      "step": "PAS",
+      "steps": {
+        "step1": {
+          "title": "Descarrega Pushsafer",
+          "description": "AlertAigua envia les seves notificacions a través de Pushsafer, un servei de notificacions push de confiança. Descarrega'l gratuïtament des de la teva botiga d'aplicacions i obre'l una vegada per crear la clau del dispositiu."
+        },
+        "step2": {
+          "title": "Configura els teus ajustos d'alerta",
+          "description": "A la configuració d'AlertAigua, tria quins valors de nivell d'aigua i cabal han d'activar una alerta. Estableix els teus propis llindars perquè només rebis els avisos que realment t'importen."
+        },
+        "step3": {
+          "title": "Afegeix AlertAigua a Pushsafer",
+          "description": "Vincula'ls amb un sol toc: prem el botó 'Afegir a Pushsafer' o escaneja el codi QR des del teu telèfon. Aquesta és tota la connexió; sense copiar claus manualment."
+        },
+        "step4": {
+          "title": "Rep alertes quan hi hagi risc d'inundació",
+          "description": "Un cop completada la configuració, ja estàs a punt. En el moment en què els nivells del riu superin els teus llindars, AlertAigua t'envia una notificació crítica directament al telèfon, de dia o de nit, perquè puguis actuar abans que l'aigua t'arribi."
+        }
+      }
+    },
     "landing": {
       "realTimeAlerts": "Alertes en temps real",
       "viaYourPhone": "a través del vostre telèfon",
@@ -101,10 +131,10 @@
     "status": {
       "statusFor": "Estat de",
       "ok": "Tots els sistemes operatius",
-      "warning": "Alguns serveis tienen problemas",
-      "error": "Algunos servicios están caídos",
-      "loading": "Cargando estado...",
-      "unknown": "Estado desconocido"
+      "warning": "Alguns serveis tenen problemes",
+      "error": "Alguns serveis no funcionen",
+      "loading": "Carregant estat...",
+      "unknown": "Estat desconegut"
     }
   }
 }

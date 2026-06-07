@@ -1,3 +1,4 @@
+import React from "react";
 import { StatusType } from "../resources";
 import { StatusIconComponent } from "./StatusIconComponent";
 

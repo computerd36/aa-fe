@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom"
+import { Navigate, Route, Routes } from "react-router-dom"
 import { PageLanding } from "./routes/PageLanding"
 import { PageSetup } from "./routes/PageSetup"
 import { PageStatus } from "./routes/PageStatus";
@@ -21,6 +21,7 @@ function App() {
           <Route path="/status" element={<PageStatus />} />
           <Route path="/how" element={<PageHow />} />
           <Route path="/help" element={<PageHelp />} />
+          <Route path="/support" element={<Navigate to="/help" replace />} />
         </Routes>
       </LanguageProvider >
     </main>

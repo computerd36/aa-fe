@@ -2,23 +2,15 @@ import { AlertAiguaStatus } from "./resources";
 
 export const StatusSystems: { name: string; key: keyof AlertAiguaStatus }[] = [
     {
-        name: "Pushsafer API",
-        key: "pushsafer_api"
+        name: "AlertAigua",
+        key: "aa_status"
     },
     {
-        name: "Pushsafer iOS App",
-        key: "pushsafer_iosApp"
+        name: "Pushsafer",
+        key: "pushsafer_status"
     },
     {
-        name: "Pushsafer Android App",
-        key: "pushsafer_androidApp"
-    },
-    {
-        name: "SAIH Ebro API",
-        key: "saihebro_api"
-    },
-    {
-        name: "SAIH Ebro Station",
-        key: "saihebro_station"
+        name: "SAIH Ebro",
+        key: "saihebro_status"
     }
 ];

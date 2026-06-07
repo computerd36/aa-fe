@@ -83,6 +83,36 @@
         "emailLabel": "Enviar un correo"
       }
     },
+    "how": {
+      "title": {
+        "prefix": "Cómo",
+        "suffix": "funciona"
+      },
+      "subtitle": "Cuatro sencillos pasos y tu teléfono se convierte en un sistema de alerta temprana de inundaciones. Sin crear cuenta, sin hardware. Solo notificaciones push en el momento en que sube el agua.",
+      "cta": {
+        "prefix": "Listo en menos de",
+        "highlight": "cinco minutos."
+      },
+      "step": "PASO",
+      "steps": {
+        "step1": {
+          "title": "Descarga Pushsafer",
+          "description": "AlertAigua envía sus notificaciones a través de Pushsafer, un servicio de notificaciones push de confianza. Descárgalo gratis desde tu tienda de aplicaciones y ábrelo una vez para crear tu clave de dispositivo."
+        },
+        "step2": {
+          "title": "Configura tus ajustes de alerta",
+          "description": "En la configuración de AlertAigua, elige qué valores de nivel de agua y caudal deben activar una alerta. Establece tus propios umbrales para recibir solo los avisos que realmente te importan."
+        },
+        "step3": {
+          "title": "Añade AlertAigua a Pushsafer",
+          "description": "Vincúlalos con un solo toque: pulsa el botón 'Añadir a Pushsafer' o escanea el código QR desde tu teléfono. Esa es toda la conexión; sin copiar claves manualmente."
+        },
+        "step4": {
+          "title": "Recibe alertas cuando haya riesgo de inundación",
+          "description": "Una vez completada la configuración, estás listo. En el momento en que los niveles del río superen tus umbrales, AlertAigua te envía una notificación crítica directamente al teléfono, de día o de noche, para que puedas actuar antes de que el agua te alcance."
+        }
+      }
+    },
     "landing": {
       "realTimeAlerts": "Alertas en tiempo real",
       "viaYourPhone": "a través de su teléfono",

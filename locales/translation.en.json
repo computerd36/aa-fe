@@ -95,6 +95,16 @@
       }
     },
     "how": {
+      "title": {
+        "prefix": "How",
+        "suffix": "works"
+      },
+      "subtitle": "Four short steps and your phone becomes a flood early-warning system. No new account, no hardware. Just push notifications, the moment the water rises.",
+      "cta": {
+        "prefix": "Ready in under",
+        "highlight": "five minutes."
+      },
+      "step": "STEP",
       "steps": {
         "step1": {
           "title": "Download Pushsafer",

@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { ReactNode, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export interface Chip {
-  icon: React.ReactNode;
+  icon: ReactNode;
   label: string;
 }
 
@@ -10,8 +11,7 @@ export interface HowStepProps {
   title: string;
   description: string;
   chips?: Chip[];
-  screenTag?: string;
-  visual: React.ReactNode;
+  visual: ReactNode;
   reverse?: boolean;
 }
 
@@ -23,6 +23,7 @@ export const HowStepComponent = ({
   visual,
   reverse = false,
 }: HowStepProps) => {
+  const { t } = useTranslation();
   const [hovered, setHovered] = useState(false);
 
   const deviceTiltClass = reverse
@@ -50,7 +51,6 @@ export const HowStepComponent = ({
             ${hovered ? "[transform:rotateY(0deg)_rotateX(2deg)]" : deviceTiltClass}
           `}
         >
-          
           {/* Screen */}
           <div
             className={`absolute inset-0 rounded-[22px] overflow-hidden flex flex-col ${shadowClass} bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent to-blue-950/15`}>
@@ -69,7 +69,7 @@ export const HowStepComponent = ({
       <div className={`w-full max-w-[460px] ${reverse ? "md:order-1 md:ml-auto" : "md:order-2"}`}>
         <div className="flex items-center gap-3 mb-5">
           <span className="text-[15px] font-bold tracking-[0.04em] text-primary tabular-nums">
-            STEP {stepNumber}
+            {t('pages.how.step')} {stepNumber}
           </span>
           <span className="h-px flex-1 max-w-[80px] bg-gradient-to-r from-primary via-[#93c5fd7f] to-transparent" />
         </div>
