@@ -39,7 +39,7 @@ export const NavbarComponent = () => {
                     <Link to={'/status'} className={`${getLinkClass('/status')}`}>{t('components.navbar.status')}</Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link to={'/support'} className={`${getLinkClass('/support')}`}>{t('components.navbar.support')}</Link>
+                    <Link to={'/help'} className={`${getLinkClass('/help')}`}>{t('components.navbar.support')}</Link>
                 </NavbarItem>
             </NavbarContent>
             <NavbarContent justify="end">

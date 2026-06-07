@@ -63,6 +63,37 @@
       "getStarted": "Get Started",
       "learnMore": "Learn More"
     },
+    "help": {
+      "title": {
+        "prefix": "Help &"
+      },
+      "subtitle": "Answers to the most common questions about AlertAigua.",
+      "faq": {
+        "iosAndroid": {
+          "question": "Is there a difference between the iOS and Android versions?",
+          "answer": "Yes. On iOS, if you enable critical notifications in the Pushsafer app, you will receive alerts even when your phone is on silent or Do Not Disturb mode is active. On Android, this behaviour must be configured manually in your system notification settings."
+        },
+        "dataSource": {
+          "question": "Where does the data come from?",
+          "answer": "We use official data from SAIH Ebro — the Sistema Automático de Información Hidrológica, operated by the Confederación Hidrográfica del Ebro, the Spanish government authority responsible for managing the Ebro river basin."
+        },
+        "safety": {
+          "question": "Is this system 100% safe?",
+          "answer": "No — and no system is. We receive data directly from SAIH Ebro. Occasionally, measuring stations go offline or experience technical difficulties. We do not take any responsibility for damages of any kind. The source code is open-source, so if you discover a potential issue in the code, please open an issue on GitHub. We tested the system for a full year and encountered zero bugs. The SAIH Ebro station was online approximately 97.4% of the time during that period."
+        },
+        "whyBuilt": {
+          "question": "Why was AlertAigua built?",
+          "answer": "This notification service was built because several people from Arens de Lledó had to manually check water levels and flow rates every single day to protect themselves, their animals, their land, and their tools from sudden floods — events that happen more frequently now than in the past."
+        }
+      },
+      "support": {
+        "title": "Still have questions?",
+        "description": "Couldn't find what you were looking for? Browse the source code or reach out directly.",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "emailLabel": "Send an email"
+      }
+    },
     "how": {
       "steps": {
         "step1": {

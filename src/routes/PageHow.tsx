@@ -7,6 +7,12 @@ import How2 from "../assets/how/how-2.png"
 import How3 from "../assets/how/how-3.png"
 import How4 from "../assets/how/how-4.png"
 
+import { LuLanguages, LuSmartphone } from "react-icons/lu";
+import { TbFreeRights } from "react-icons/tb";
+import { FaHouseFloodWaterCircleArrowRight } from "react-icons/fa6";
+import { ButtonComponent } from "../components/ButtonComponent";
+import { LogIn } from "lucide-react";
+
 
 export const PageHow = () => {
     const { t } = useTranslation();
@@ -16,24 +22,29 @@ export const PageHow = () => {
         {
             title: t('pages.how.steps.step1.title'),
             description: t('pages.how.steps.step1.description'),
-            element: <img src={How1} alt="How 1" className="w-full rounded-lg shadow-lg" />,
+            element: <img src={How1} alt="Showing both the logos of AlertAigua and Pushsafer stacked on top of each other" className="h-full rounded-lg shadow-lg" />,
             chips: [
-                { icon: <img src="/assets/icons/phone.svg" alt="Phone" className="w-4" />, label: "Android & iOS" }, //lucide banknote X here
-                { icon: <img src="/assets/icons/cloud.svg" alt="Cloud" className="w-4" />, label: "Free" }, // lucide banknote X here
+                { icon: <LuSmartphone size={24} />, label: "Android & iOS" }, //lucide banknote X here
+                { icon: <TbFreeRights size={24} />, label: "Free" }, // lucide banknote X here
             ],
         },
         {
             title: t('pages.how.steps.step2.title'),
             description: t('pages.how.steps.step2.description'),
-            element: <img src={How2} alt="How 2" className="w-full rounded-lg shadow-lg" />
+            // blue gradient glow shadow
+            element: <img src={How2} alt="Showing two sliders controlling water level and flow rate as they are adjusted" className="h-full rounded-lg shadow-xl" />,
+            chips: [
+                { icon: <FaHouseFloodWaterCircleArrowRight size={24} />, label: "Waterlevel or Flowrate" }, //lucide banknote X here
+                { icon: <LuLanguages size={24} />, label: "Spanish, Catalan or English" }, // lucide banknote X here
+            ],
         }, {
             title: t('pages.how.steps.step3.title'),
             description: t('pages.how.steps.step3.description'),
-            element: <img src={How3} alt="How 3" className="w-full rounded-lg shadow-lg" />
+            element: <img src={How3} alt="Showing a button and a QR code to add AlertAigua to Pushsafer" className="h-full rounded-lg shadow-lg" />
         }, {
             title: t('pages.how.steps.step4.title'),
             description: t('pages.how.steps.step4.description'),
-            element: <img src={How4} alt="How 4" className="w-full rounded-lg shadow-lg" />
+            element: <img src={How4} alt="Showing some notifications being received, the one in focus says 'Flood Warning! Water level has exceeded your threshold!...'" className="h-full rounded-lg shadow-lg" />
 
         },
     ];
@@ -42,24 +53,36 @@ export const PageHow = () => {
     return (
         <PageWrapper>
             <div className="w-full px-2 md:px-[20vw]">
-                <div className="w-full mt-[10dvh] flex flex-col items-center justify-center">
-                    <h1 className="text-2xl md:text-4xl xl:text-6xl text-zinc-50 font-semibold">How <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary font-bold">AlertAigua</span> works</h1>
-                    <h2 className="text-md md:text-lg xl:text-xl text-zinc-200 text-center mt-4">Four short steps and your phone becomes a flood early-warning system. No new account, no hardware. Just push notifications, the moment the water rises.</h2>
+                <div className="w-full mt-[10dvh] mb-16 flex flex-col items-center justify-center">
+                    <h1 className="text-4xl md:text-5xl xl:text-6xl text-zinc-50 font-semibold text-center">How <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary font-bold">AlertAigua</span> works</h1>
+                    <h2 className="text-md md:text-lg xl:text-xl text-zinc-200 text-center mt-4 text-balance">Four short steps and your phone becomes a flood early-warning system. No new account, no hardware. Just push notifications, the moment the water rises.</h2>
                 </div>
 
-                {steps.map((step, index) => (
-                    <HowStepComponent
-                        key={"step-" + index}
-                        stepNumber={(index + 1).toString().padStart(2, '0')}
-                        title={step.title}
-                        description={step.description}
-                        screenTag={`Step ${index + 1}`}
-                        visual={step.element}
-                        reverse={index % 2 === 1}
-                        chips={step.chips || []}
+                <div className="mb-16">
+                    {steps.map((step, index) => (
+                        <HowStepComponent
+                            key={"step-" + index}
+                            stepNumber={(index + 1).toString()}
+                            title={step.title}
+                            description={step.description}
+                            screenTag={`Step ${index + 1}`}
+                            visual={step.element}
+                            reverse={index % 2 === 1}
+                            chips={step.chips || []}
+                        />
+                    ))}
+                </div>
+
+                <div className="w-full mb-16 flex flex-col items-center justify-center">
+                    <h2 className="text-3xl md:text-4xl xl:text-5xl text-zinc-50 font-semibold text-center text-balance mb-4">Ready in under <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary font-bold">five minutes.</span></h2>
+                    <ButtonComponent
+                        icon={<LogIn />}
+                        text={t('pages.landing.getStarted')}
+                        to="/setup"
+                        isPrimary
                     />
-                ))}
+                </div>
             </div>
-        </PageWrapper>
+        </PageWrapper >
     )
 };

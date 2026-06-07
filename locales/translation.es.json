@@ -52,6 +52,37 @@
     }
   },
   "pages": {
+    "help": {
+      "title": {
+        "prefix": "Ayuda &"
+      },
+      "subtitle": "Respuestas a las preguntas más frecuentes sobre AlertAigua.",
+      "faq": {
+        "iosAndroid": {
+          "question": "¿Hay diferencia entre las versiones de iOS y Android?",
+          "answer": "Sí. En iOS, si activas las notificaciones críticas en la app Pushsafer, recibirás alertas aunque el teléfono esté en silencio o el modo No molestar esté activo. En Android, este comportamiento debe configurarse manualmente en los ajustes de notificaciones del sistema."
+        },
+        "dataSource": {
+          "question": "¿De dónde provienen los datos?",
+          "answer": "Utilizamos datos oficiales del SAIH Ebro — el Sistema Automático de Información Hidrológica, gestionado por la Confederación Hidrográfica del Ebro, el organismo oficial del Gobierno de España responsable de la gestión de la cuenca del río Ebro."
+        },
+        "safety": {
+          "question": "¿Es este sistema 100% seguro?",
+          "answer": "No — ningún sistema lo es. Recibimos los datos directamente del SAIH Ebro. En ocasiones, las estaciones de medición se desconectan o presentan dificultades técnicas. No nos hacemos responsables de ningún tipo de daño. El código fuente es abierto; si encuentras un posible problema en el código, puedes reportarlo como Issue en GitHub. Probamos el sistema durante un año completo sin encontrar ningún error. La estación del SAIH Ebro estuvo en línea aproximadamente el 97,4% del tiempo durante ese período."
+        },
+        "whyBuilt": {
+          "question": "¿Por qué se creó AlertAigua?",
+          "answer": "Este servicio de notificaciones fue creado porque varias personas de Arens de Lledó tenían que comprobar manualmente los niveles de agua y los caudales cada día para protegerse a sí mismas, a sus animales, sus tierras y sus herramientas de las inundaciones repentinas — eventos que ocurren con más frecuencia ahora que en el pasado."
+        }
+      },
+      "support": {
+        "title": "¿Aún tienes preguntas?",
+        "description": "¿No encontraste lo que buscabas? Revisa el código fuente o contáctanos directamente.",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "emailLabel": "Enviar un correo"
+      }
+    },
     "landing": {
       "realTimeAlerts": "Alertas en tiempo real",
       "viaYourPhone": "a través de su teléfono",

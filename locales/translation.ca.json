@@ -52,6 +52,37 @@
     }
   },
   "pages": {
+    "help": {
+      "title": {
+        "prefix": "Ajuda &"
+      },
+      "subtitle": "Respostes a les preguntes més freqüents sobre AlertAigua.",
+      "faq": {
+        "iosAndroid": {
+          "question": "Hi ha diferència entre les versions d'iOS i Android?",
+          "answer": "Sí. A iOS, si actives les notificacions crítiques a l'app Pushsafer, rebràs alertes fins i tot quan el telèfon estigui en silenci o el mode No molestar estigui actiu. A Android, aquest comportament s'ha de configurar manualment als ajustos de notificacions del sistema."
+        },
+        "dataSource": {
+          "question": "D'on provenen les dades?",
+          "answer": "Fem servir les dades oficials del SAIH Ebro — el Sistema Automàtic d'Informació Hidròlogica, operat per la Confederació Hidrogràfica de l'Ebre, l'organisme oficial del Govern d'Espanya responsable de la gestió de la conca del riu Ebre."
+        },
+        "safety": {
+          "question": "Aquest sistema és 100% segur?",
+          "answer": "No — cap sistema ho és. Rebem les dades directament del SAIH Ebro. De vegades, les estacions de mesura queden fora de línia o presenten dificultats tècniques. No ens fem responsables de cap tipus de dany. El codi font és obert; si trobes un possible problema al codi, pots informar-lo com a Issue a GitHub. Vam provar el sistema durant un any sencer sense trobar cap error. L'estació del SAIH Ebro va estar en línia aproximadament el 97,4% del temps durant aquell període."
+        },
+        "whyBuilt": {
+          "question": "Per què es va crear AlertAigua?",
+          "answer": "Aquest servei de notificacions va ser creat perquè diverses persones d'Arens de Lledó havien de comprovar manualment els nivells d'aigua i els cabals cada dia per protegir-se, els seus animals, les seves terres i les seves eines de les inundacions sobtades — esdeveniments que succeeixen amb més freqüència ara que en el passat."
+        }
+      },
+      "support": {
+        "title": "Encara tens preguntes?",
+        "description": "No has trobat el que buscaves? Revisa el codi font o posa't en contacte directament.",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "emailLabel": "Envia un correu"
+      }
+    },
     "landing": {
       "realTimeAlerts": "Alertes en temps real",
       "viaYourPhone": "a través del vostre telèfon",

@@ -4,6 +4,7 @@ import { PageSetup } from "./routes/PageSetup"
 import { PageStatus } from "./routes/PageStatus";
 import { LanguageProvider } from "./context/languageContext";
 import { PageHow } from "./routes/PageHow";
+import { PageHelp } from "./routes/PageHelp";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/setup" element={<PageSetup />} />
           <Route path="/status" element={<PageStatus />} />
           <Route path="/how" element={<PageHow />} />
+          <Route path="/help" element={<PageHelp />} />
         </Routes>
       </LanguageProvider >
     </main>
