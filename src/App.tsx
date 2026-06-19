@@ -5,6 +5,7 @@ import { PageStatus } from "./routes/PageStatus";
 import { LanguageProvider } from "./context/languageContext";
 import { PageHow } from "./routes/PageHow";
 import { PageHelp } from "./routes/PageHelp";
+import { PageImprint } from "./routes/PageImprint";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/how" element={<PageHow />} />
           <Route path="/help" element={<PageHelp />} />
           <Route path="/support" element={<Navigate to="/help" replace />} />
+          <Route path="/imprint" element={<PageImprint />} />
         </Routes>
       </LanguageProvider >
     </main>

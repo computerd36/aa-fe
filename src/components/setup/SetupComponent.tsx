@@ -68,7 +68,7 @@ export const SetupComponent = () => {
             {/* header */}
             <div className="w-full h-8 flex items-center justify-between">
                 <Link to={'/'} className="flex items-center gap-1 text-red-400 font-medium">{t('components.setup.cancel')}</Link>
-                <Link to={'/'} className="flex items-center gap-1 text-primary font-medium"><LucideCircleHelp /></Link>
+                <Link to={'/how'} className="flex items-center gap-1 text-primary font-medium"><LucideCircleHelp /></Link>
             </div>
 
             {/* content */}

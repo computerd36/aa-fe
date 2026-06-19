@@ -37,16 +37,16 @@ export const PageStatus = () => {
 
 
     return (
-        <PageWrapper>
+        <PageWrapper hasFooter={true}>
             <div className="w-full px-2 md:px-[20vw]">
                 <div className="w-full mt-[10dvh] flex flex-col items-center justify-center">
-                    <h1 className="text-md md:text-xl xl:text-2xl text-gray-400">{t("general.status.statusFor")} <span className="text-lg md:text-2xl xl:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary font-bold">AlertAigua</span></h1>
+                    <h1 className="text-md md:text-xl xl:text-2xl text-zinc-400">{t("general.status.statusFor")} <span className="text-lg md:text-2xl xl:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary font-bold">AlertAigua</span></h1>
                     <div className="flex flex-col items-center justify-center mt-4">
                         <StatusIconComponent
                             className="w-36 h-36 mt-4"
                             status={totalStatus}
                         />
-                        <p className="text-md md:text-lg xl:text-xl font-bold text-gray-300">
+                        <p className="text-md md:text-lg xl:text-xl font-bold text-zinc-200">
                             {t(`general.status.${totalStatus}`)}
                         </p>
                     </div>

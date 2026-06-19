@@ -27,6 +27,12 @@ body,
   overscroll-behavior-y: none;
 }
 
+/* Reserve space for the scrollbar so layout doesn't shift when content
+   grows past the viewport (e.g. accordion expansion on PageHelp). */
+html {
+  scrollbar-gutter: stable;
+}
+
 @property --how-border-angle {
   syntax: '<angle>';
   inherits: false;

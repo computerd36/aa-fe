@@ -6,6 +6,10 @@
       "support": "Suport",
       "getStarted": "Començar"
     },
+    "footer": {
+      "copyright": "© {{year}} AlertAigua",
+      "imprint": "Avís legal"
+    },
     "setup": {
       "cancel": "Cancel·lar",
       "back": "Enrere",
@@ -81,6 +85,23 @@
         "frontend": "Frontend",
         "backend": "Backend",
         "emailLabel": "Envia un correu"
+      }
+    },
+    "imprint": {
+      "title": "Avís legal",
+      "responsible": {
+        "title": "Responsable del contingut"
+      },
+      "contact": {
+        "title": "Contacte"
+      },
+      "liability": {
+        "title": "Responsabilitat",
+        "body": "AlertAigua és un projecte no comercial i de codi obert, ofert tal qual, sense cap garantia. L'operador no assumeix cap responsabilitat per danys derivats de l'ús, mal ús o indisponibilitat del servei. Els enllaços externs apunten a llocs de tercers el contingut dels quals no controlem; els proveïdors respectius són responsables d'aquest contingut."
+      },
+      "dataSource": {
+        "title": "Font de dades",
+        "body": "Les dades hidrològiques són proporcionades pel SAIH Ebro (Sistema Automàtic d'Informació Hidrològica), gestionat per la Confederació Hidrogràfica de l'Ebre. Les notificacions push s'envien a través de Pushsafer."
       }
     },
     "how": {

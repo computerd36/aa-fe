@@ -6,6 +6,10 @@
       "support": "Support",
       "getStarted": "Get Started"
     },
+    "footer": {
+      "copyright": "© {{year}} AlertAigua",
+      "imprint": "Imprint"
+    },
     "setup": {
       "cancel": "Cancel",
       "back": "Back",
@@ -92,6 +96,23 @@
         "frontend": "Frontend",
         "backend": "Backend",
         "emailLabel": "Send an email"
+      }
+    },
+    "imprint": {
+      "title": "Imprint",
+      "responsible": {
+        "title": "Responsible for content"
+      },
+      "contact": {
+        "title": "Contact"
+      },
+      "liability": {
+        "title": "Liability",
+        "body": "AlertAigua is a non-commercial, open-source project provided as-is, without any warranty. The operator accepts no liability for damages of any kind arising from the use, misuse, or unavailability of the service. External links point to third-party websites whose content is not under our control; the respective providers are responsible for their content."
+      },
+      "dataSource": {
+        "title": "Data source",
+        "body": "Hydrological data is provided by SAIH Ebro (Sistema Automático de Información Hidrológica), operated by the Confederación Hidrográfica del Ebro. Push notifications are delivered through Pushsafer."
       }
     },
     "how": {

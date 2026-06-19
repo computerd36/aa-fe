@@ -50,7 +50,7 @@ export const PageHow = () => {
 
 
     return (
-        <PageWrapper>
+        <PageWrapper hasFooter={true}>
             <div className="w-full px-2 md:px-[20vw]">
                 <div className="w-full mt-[10dvh] mb-16 flex flex-col items-center justify-center">
                     <h1 className="text-4xl md:text-5xl xl:text-6xl text-zinc-50 font-semibold text-center">

@@ -12,7 +12,7 @@ export const StatusIconComponent = ({ status, className }: StatusIconComponentPr
 
     switch (status) {
         case 'loading':
-            iconColor = 'text-gray-500';
+            iconColor = 'text-zinc-500';
             return <LoaderCircle className={`${iconColor} ${className} animate-spin`} />;
         case 'ok':
             iconColor = 'text-green-500';
@@ -24,7 +24,7 @@ export const StatusIconComponent = ({ status, className }: StatusIconComponentPr
             iconColor = 'text-red-500';
             return <CircleX className={`${iconColor} ${className}`} />;
         default:
-            iconColor = 'text-gray-500';
+            iconColor = 'text-zinc-500';
             return <CircleHelp className={`${iconColor} ${className}`} />;
     }
 };

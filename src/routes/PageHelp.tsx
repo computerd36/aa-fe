@@ -16,7 +16,7 @@ export const PageHelp = () => {
     const { t } = useTranslation();
 
     return (
-        <PageWrapper>
+        <PageWrapper hasFooter={true}>
             <div className="w-full px-2 md:px-[20vw]">
                 <div className="w-full mt-[10dvh] mb-12 flex flex-col items-center justify-center">
                     <h1 className="text-2xl md:text-5xl xl:text-6xl text-zinc-50 font-semibold text-center">
@@ -25,7 +25,7 @@ export const PageHelp = () => {
                             AlertAigua
                         </span>
                     </h1>
-                    <h2 className="text-md md:text-lg xl:text-xl text-zinc-400 text-center mt-4 text-balance max-w-2xl">
+                    <h2 className="text-md md:text-lg xl:text-xl text-zinc-200 text-center mt-4 text-balance max-w-2xl">
                         {t("pages.help.subtitle")}
                     </h2>
                 </div>
@@ -36,7 +36,7 @@ export const PageHelp = () => {
                     itemClasses={{
                         base: "bg-zinc-900 border border-zinc-800 rounded-xl",
                         title: "text-zinc-100 font-medium text-base",
-                        content: "text-zinc-400 pb-4 leading-relaxed",
+                        content: "text-zinc-300 pb-4 leading-relaxed",
                         trigger: " py-4",
                         indicator: "text-zinc-500",
                     }}
@@ -59,7 +59,7 @@ export const PageHelp = () => {
                     <p className="text-zinc-500 text-xs font-semibold uppercase tracking-widest mb-3">
                         {t("pages.help.support.title")}
                     </p>
-                    <p className="text-zinc-400 text-sm mb-4 leading-relaxed">
+                    <p className="text-zinc-300 text-sm mb-4 leading-relaxed">
                         {t("pages.help.support.description")}
                     </p>
                     <div className="flex flex-col divide-y divide-zinc-800">
